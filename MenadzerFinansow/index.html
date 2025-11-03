@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menadżer finansów</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/f7bb3dcecd.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="modal">
+            <h2>Dodaj nową transakcję:</h2>
+            <form>
+                <div class="formBox">
+                <label for="name">Nazwa:</label>
+                <small>(Podaj nazwę transakcji)</small>
+                <input type="text" id="name">
+                <p class="error">To pole nie może być puste!</p>
+                </div>
+                <div class="formBox">
+                <label for="means">Kwota:</label>
+                <small>(Podaj kwotę transakcji, jeśli dodajesz wydatek postaw '-' na początku)</small>
+                <input type="number" id="means">
+                <p class="error">To pole nie może być puste!</p>
+                </div>
+                <div class="formBox">
+                <label for="category">Kategoria:</label>
+                <small>(Wybierz kategorię transakcji, (+) to przychód, (-) to wydatek)</small>
+                <select id="category">
+                    <option value="" selected disabled>-- Wybierz kategorię --</option>
+                    <option value="0">(-) Zakupy</option>
+                    <option value="1">(-) Jedzenie</option>
+                    <option value="2">(-) Paliwo</option>
+                    <option value="3">(+) Przychód</option>
+                </select>
+                <p class="error">Musisz wybrać jakąś opcję</p>
+                </div>
+                <div class="buttonsModal">
+                <button class="save"><i class="fa-solid fa-floppy-disk"></i> Zapisz</button>
+                <button class="cancel"><i class="fa-solid fa-ban"></i> Anuluj</button>
+                <p class="noMoney">Brak wystarczających środków na koncie</p>
+                </div>
+            </form>
+        </div>
+        <div class="wrapper">
+            <header>
+        <h1><i class="fa-solid fa-building-columns"></i></h1>
+        <p>Twoje finanse</p>
+        </header>
+        <main>
+            <div class="income">
+                <p>Przychody</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </div>
+            <div class="expense">
+                <p>Wydatki</p>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </div>
+            <div class="walletManagment">
+                <p class="top">Dostępne środki:</p>
+                <p class="money">0.00zł</p>
+                <div class="buttons">
+                    <button class="add"><i class="fa-solid fa-plus"></i> Dodaj środki</button>
+                    <button class="clear"><i class="fa-solid fa-trash"></i> Wyczyść wszystko</button>
+                </div>
+                <div class="style">
+                    <p class="style">Wybierz motyw:</p>
+                    <button class="white"></button>
+                    <button class="black"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
