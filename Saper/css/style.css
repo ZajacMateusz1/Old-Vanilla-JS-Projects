@@ -1,160 +1,162 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 :root {
-    --dark: #333;
-    --light: white;
-    --header: royalblue;
-    --size: ;
-    --boardWidth: ;
+  --dark: #333;
+  --light: white;
+  --header: royalblue;
+  --size: ;
+  --boardWidth: ;
 }
 body {
-    font-family: 'Roboto',Arial, Helvetica, sans-serif;
-    color: var(--dark);
-    font-size: 10px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  font-size: 10px;
 }
 main.game {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    background-color: var(--light);
-    width: var(--boardWidth);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light);
+  width: var(--boardWidth);
 }
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-    background-color: var(--header);
-    color: var(--light);
-    border-radius: 5px 5px 0 0;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--header);
+  color: var(--light);
+  border-radius: 5px 5px 0 0;
+  width: 100%;
 }
-header i,p {
-    display: inline-block;
-    font-size: 1.2rem;
-    margin: 0 0.2rem 0;
+header i,
+p {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 0.2rem 0;
 }
-header div.difficulty select{
-    font-size: 1.3rem;
-    padding: 0.4rem;
-    background-color: var(--light);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+header div.difficulty select {
+  font-size: 1.3rem;
+  padding: 0.4rem;
+  background-color: var(--light);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 header div.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 45%;
-    text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  text-align: center;
 }
 header div.header button {
-    background-color: var(--light);
-    border: none;
-    padding: 0.3rem;
-    border-radius: 0.3rem;
-    cursor: pointer;
+  background-color: var(--light);
+  border: none;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
 }
 header div.header button i {
-    transition: transform 0.5s;
+  transition: transform 0.5s;
 }
 header div.header button:hover i {
-    transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 div.gameContent {
-    width: 100%;
+  width: 100%;
 }
 div.gameBoard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border: 0.2rem solid var(--dark);
-    border-radius: 0 0 5px 5px;
-    padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 0.2rem solid var(--dark);
+  border-radius: 0 0 5px 5px;
+  padding: 0.5rem;
 }
-div.gameBoard div.cell{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0.2px solid var(--dark);
-    font-weight: bold;
-    height: var(--size);
-    width: var(--size);
-    font-size: 20px;
+div.gameBoard div.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.2px solid var(--dark);
+  font-weight: bold;
+  height: var(--size);
+  width: var(--size);
+  font-size: 20px;
 }
-div.gameBoard div.cell.flag, div.gameBoard div.cell.bomb {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+div.gameBoard div.cell.flag,
+div.gameBoard div.cell.bomb {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 div.gameBoard div.cell.reveal {
-    background-color: #d3d0db;
+  background-color: #d3d0db;
 }
 div.gameBoard div.cell.flag {
-    background-image: url(/assets/flag.svg);
+  background-image: url(../assets/flag.svg);
 }
 div.gameBoard div.cell.bomb {
-    background-image: url(/assets/bomb.svg);
+  background-image: url(../assets/bomb.svg);
 }
 div.modal {
-    position: absolute;
-    left: 50%;
-    top: 0%;
-    z-index: 1;
-    transform: translate(-50%,-100%);
-    height: 250px;
-    width: 450px;
-    border-radius: 3px;
-    border: 3px solid white;
-    padding: 20px;
-    background-color: var(--dark);
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    transition: transform 3.5s;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  z-index: 1;
+  transform: translate(-50%, -100%);
+  height: 250px;
+  width: 450px;
+  border-radius: 3px;
+  border: 3px solid white;
+  padding: 20px;
+  background-color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 3.5s;
 }
 div.modal.active {
-    transform: translate(-50%,45%);
+  transform: translate(-50%, 45%);
 }
 div.modal p {
-    margin: 20px 0 50px 0;
-    font-size: 24px;
-    color: var(--light);
-    text-align: center;
-    font-weight: bold;
+  margin: 20px 0 50px 0;
+  font-size: 24px;
+  color: var(--light);
+  text-align: center;
+  font-weight: bold;
 }
 div.modal button {
-    padding: 10px;
-    cursor: pointer;
+  padding: 10px;
+  cursor: pointer;
 }
 div.modal.active + main.game {
-    pointer-events: none;
+  pointer-events: none;
 }
 .value1 {
-    color:green
+  color: green;
 }
 .value2 {
-    color:royalblue
+  color: royalblue;
 }
 .value3 {
-    color:red
+  color: red;
 }
 .value4 {
-    color:blueviolet
+  color: blueviolet;
 }
 .value5 {
-    color:orange
+  color: orange;
 }
 .value6 {
-    color:chartreuse
+  color: chartreuse;
 }
 .value7 {
-    color:var(--dark)
+  color: var(--dark);
 }
 .value8 {
-    color:gold
+  color: gold;
 }
