@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.appBody {
+    width: 50%;
+    box-shadow: 0 0 15px #333;
+    border-radius: 5px;
+    position: relative;
+}
+header {
+    height: 40vh;
+    position: relative;
+    background-image: url(default.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+button.settings {
+    position: absolute;
+    right: 3%;
+    top: 5%;
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: aliceblue;
+    border: 1px solid #333;
+    transition: color .3s background-color .3s;
+}
+main {
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+main table {
+    width: 100%;
+}
+main table tr {
+    display: flex;
+    justify-content: space-around;
+}
+main table tr td {
+    display: inline-block;
+    width: 23%;
+    padding: 5px;
+    text-align: center;
+    font-size: 24px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+div.settings {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    height: 40vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.5s;
+    border: 1px solid #333;
+}
+div.settings.active {
+    left: 103%;
+}
+div.settings form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+}
+div.settings h2 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+div.settings form label {
+    margin-bottom: 5px;
+}
+div.settings form input {
+    width: 70%;
+    padding: 4px;
+    border: 1px solid #333;
+}
+div.settings form table {
+    margin: 5px 0;
+}
+
+div.settings form table tr td{
+    width: 25%;
+}
+div.settings form table tr td label {
+    display: block;
+    margin: 2px;
+}
+form button {
+    margin: 15px 0;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #333;
+    background-color: transparent;
+    font-size: 12px;
+    transition: color .3s background-color .3s;
+}
+button:hover {
+    background-color: #333;
+    color: white;
+}

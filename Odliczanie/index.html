@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Counter</title>
+    <script src="https://kit.fontawesome.com/f7bb3dcecd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="appBody">
+            <div class="settings">
+                <h2>Ustawienia</h2>
+                <form>
+                    <label for="name">Nazwa wydarzenia:</label>
+                    <input type="text" id="name" value="Nowy rok" maxlength="255">
+                    <table>
+                        <tr>
+                            <td><label for="day">Dzień:</label><input id="day" type="number" min="1" max="31" value="1"></td>
+                            <td><label for="month">Miesiąc:</label><input id="month" type="number" min="1" max="12" value="1"></td>
+                            <td><label for="year">Rok:</label><input id="year" type="number" value="2025"></td>
+                        </tr>
+                    </table>
+                    <label for="img">Link do obrazka:</label>
+                    <input type="text" id="img" value="default.jpg">
+                    <button class="save"><i class="fa-solid fa-floppy-disk"></i> Zapisz</button>
+                </form>
+            </div>
+            <header>
+                <button class="settings"><i class="fa-solid fa-gear"></i></button>
+            </header>
+            <main>
+            <h1><span class="event">Nowy rok</span> za:</h1>
+            <table>
+                <tr>
+                    <td><span class="days">1</span> Dni</td>
+                    <td><span class="hours">1</span> Godzin</td>
+                    <td><span class="minutes">1</span> Minut</td>
+                    <td><span class="seconds">1</span> Sekund</td>
+                </tr>
+            </table>
+            </main>
+        </div>
+    <script src="main.js"></script>
+</body>
+</html>

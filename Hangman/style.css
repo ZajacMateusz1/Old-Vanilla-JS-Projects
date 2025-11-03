@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --dark: #333;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+}
+section.hangman {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px var(--dark);
+    background-color: #eee;
+    height: 500px;
+    width: 500px;
+}
+section.hangman h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+section.hangman div.category {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+};
+section.hangman div.letters {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+section.hangman div.letters button {
+    flex-grow: 1;
+    padding: 7px;
+    margin: 5px;
+    background-color: white;
+    border: 1px solid var(--dark);
+    border-radius: 2px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color .3s, color .3s;
+}
+section.hangman div.letters button:hover {
+    background-color: var(--dark);
+    color: aliceblue;
+}
+section.hangman div.word {
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    font-size: 24px;
+}
+section.hangman div.output {
+    height: 210px;
+    text-align: center;
+}
+section.hangman div.output img {
+    height: 100%;
+    width: 300px;
+}
+div.modal {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    z-index: 1;
+    transform: translate(-50%,-100%);
+    height: 250px;
+    width: 450px;
+    border-radius: 3px;
+    border: 3px solid white;
+    padding: 20px;
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    transition: transform 1.5s;
+}
+div.modal.active {
+    transform: translate(-50%,45%);
+}
+div.modal p {
+    margin: 20px 0 50px 0;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+div.modal button {
+    padding: 10px;
+    cursor: pointer;
+}
+div.modal.active + section.hangman {
+    pointer-events: none;
+}

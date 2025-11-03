@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ddd;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+div.wrapper {
+    width: 30%;
+    padding: 3%;
+    border-radius: 1%;
+    box-shadow: 0 0 3px black;
+    background-color: white;
+}
+form {
+    position: relative;
+}
+form h1 {
+    font-size: 42px;
+    margin-bottom: 6%;
+    text-align: center;
+}
+form label {
+    display: block;
+    margin-bottom: 2%;
+    font-size: 18px;
+}
+form input {
+    padding: 1%;
+    border: 1px solid black;
+    border-radius: 2%;
+    width: 100%;
+    font-size: 14px;
+}
+p.error {
+    visibility: hidden;
+}
+div.form-box.error input {
+    background-color: rgb(255, 0, 0,0.1);
+    border: 1px solid red;
+}
+div.form-box.error p.error {
+    visibility: visible;
+    color: red;
+}
+ form div.buttons {
+    display: flex;
+    justify-content: flex-end;
+ }
+form div.buttons button, .close {
+    margin-left: 2%;
+    padding: 1%;
+    font-size: 12px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5%;
+    height: 5vh;
+    width: 25%;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+form div.buttons button:hover, .close:hover {
+ background-color: rgb(100, 200, 0)
+}
+
+button.close {
+    margin: 5% 0 0 0;
+}
+
+div.popup {
+    width: 30vw;
+    padding: 2%;
+    border: 1px solid black;
+    position: absolute;
+    margin-top: 2%;
+    text-align: center;
+    left: 35%;
+    top: -150%;
+    background-color: white;
+    transition: top .3s;
+    z-index: 1;
+}
+div.popup.active {
+    top: -2%;
+}
+div.wrapper.active {
+    filter: blur(4px);
+    pointer-events: none;
+}

@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee;
+}
+div.wrapper {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,0);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 400px;
+    width: 600px;
+    box-shadow: 0px 0px 10px #333;
+    text-align: center;
+    background-color: white;
+}
+div.top {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: royalblue;
+}
+div.top h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: aliceblue;
+    text-transform: uppercase;
+}
+div.top input, div.modal input {
+    padding: 5px;
+    font-size: 21px;
+    border: 2px solid transparent;
+    margin-right: 10px;
+}
+div.top input:focus, div.modal input:focus{
+    outline: none;
+    border-color: #333;
+}
+div.top button.add {
+    padding: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    transition: color .3s, background-color .3s;
+}
+div.top button.add:hover {
+    color: white;
+    background-color: #333;
+}
+div.bottom h2 {
+    font-size: 26px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+div.bottom p.error, p.errorModal {
+    visibility: hidden;
+    margin-bottom: 10px;
+}
+div.bottom ul {
+    list-style: none;
+    text-align: left;
+    padding: 0 15px;
+}
+div.bottom ul li {
+    background-color: #eee;
+    margin: 10px 0;
+    padding: 4px 10px 5px;
+    display: flex;
+    border-radius: 5px;
+}
+div.bottom ul li div.buttons {
+    margin-left: auto;
+}
+div.bottom ul li button {
+    padding: 3px;
+    margin: 0 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+div.bottom ul li button:hover {
+    background-color: white;
+}
+div.bottom ul li button.done {
+    color: green;
+}
+div.bottom ul li button.edit, button.save {
+    color: royalblue;
+}
+div.bottom ul li button.remove, button.cancel, p.error, p.errorModal {
+    color: red;
+}
+div.modal {
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-color: #333;
+    height: 200px;
+    width: 600px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform .3s;
+}
+div.modal h3 {
+    color: aliceblue;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+div.modal input {
+    font-size: 20px;
+    margin-right: 0;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+div.modal input:focus {
+    border-color: royalblue;
+}
+div.modal div.buttonsModal button {
+    padding: 5px;
+    margin: 0 10px;
+    width: 75px;
+    font-size: 24px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+div.modal div.buttonsModal button:hover {
+    background-color: #ccc;
+}
+div.modal.active {
+    transform: translate(-50%,-105%);
+}
+
+.done {
+    font-style: italic;
+    text-decoration: line-through;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo list</title>
+    <script src="https://kit.fontawesome.com/f7bb3dcecd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <h1>ToDo list</h1>
+            <input type="text" id="task" placeholder="Wpisz tu zadanie">
+            <button class="add">Dodaj</button>
+        </div>
+        <div class="bottom">
+            <h2>Lista zadań:</h2>
+            <p class="error">Nie podałeś zadania!</p>
+            <ul>
+            </ul>
+        </div>
+    </div>
+<div class="modal">
+    <h3>Edytuj zadanie:</h3>
+    <input type="text" id="modalInput" placeholder="Wprowadź nową treść zadania!">
+    <p class="errorModal">Nie wprowadziłeś żadnej zmiany!</p>
+    <div class="buttonsModal"><button class="save"><i class="fa-solid fa-floppy-disk"></i></button><button class="cancel"><i class="fa-solid fa-ban"></i></button>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>

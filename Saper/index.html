@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saper</title>
+    <script src="https://kit.fontawesome.com/f7bb3dcecd.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="assets/bomb.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="modal">
+        <p></p>
+        <button class="playAgain">Zagraj ponownie</button>
+    </div>
+    <main class="game">
+        <header>
+            <div class="difficulty">
+                <select name='select' id="selectDifficulty">
+                    <option value="0" selected>Łatwy</option>
+                    <option value="1">Normalny</option>
+                    <option value="2">Trudny</option>
+                </select>
+            </div>
+            <div class="header">
+                <button class="reset"><i class="fa-solid fa-rotate-right"></i></button>
+                <div class="counter"><p></p><i class="fa-solid fa-flag"></i></div>
+                <div class="timeCount"><p><span class="minutes">00</span>:<span class="seconds">00</span></span></p><i class="fa-regular fa-clock"></i></div>
+            </div>
+        </header>
+        <div class="gameContent"><div class="gameBoard"></div></div>
+    </main>
+<script type="module" src="./script/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walidator formulrza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form>
+            <h1>Zarejestruj się!</h1>
+           <div class="form-box">
+            <label for="login">Nazwa użytkownika:</label>
+            <input type="text" id="login" placeholder="Wpisz login">
+            <p class="error">error</p>
+           </div>
+           <div class="form-box">
+            <label for="email">Adres e-mail:</label>
+            <input type="email" id="email" placeholder="Wpisz e-mail">
+            <p class="error">error</p>
+           </div>
+           <div class="form-box">
+            <label for="pass">Hasło:</label>
+            <input type="password" id="pass" placeholder="Wpisz hasło">
+            <p class="error">error</p>
+           </div>
+           <div class="form-box">
+            <label for="pass2">Powtórz hasło:</label>
+            <input type="password" id="pass2" placeholder="Powtórz hasło">
+            <p class="error">error</p>
+           </div>
+           <div class="buttons">
+           <button class="clear">Wyczyść</button>
+           <button class="submit">Wyślij</button>
+        </div>
+    </form>
+</div>
+<div class="popup">
+ <p>Formularz został poprawnie wysłany</p>
+ <form><button class="close">Zamkinij</button></form>
+</div>
+    <script src="main.js"></script>
+</body>
+</html>
